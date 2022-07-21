@@ -1,0 +1,62 @@
+<div class="container py-5 w-50 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-50">
+      <div class="card bg-dark text-white" style="border-radius: 1rem;">
+        <div class="card-body p-5 text-center">
+          <div class="mb-md-5 mt-md-4 pb-5">
+            <h2 class="fw-bold mb-2 text-uppercase">Registro Empleado</h2>
+            <p class="text-white-50 mb-5">Ingrese sus Datos</p>
+            <form [formGroup]="employeeForm">
+                <!-- Name input -->
+                <div class="form-outline mb-4">
+                    <input type="text" formControlName="name" class="form-control" />
+                    <label class="form-label" for="registerName">Nombres</label>
+                </div>
+
+                <!-- Lastname input -->
+                <div class="form-outline mb-4">
+                    <input type="text" formControlName="lastname" class="form-control" />
+                    <label class="form-label" for="registerName">Apellidos</label>
+                </div>
+
+                <!-- Username input -->
+                <div class="form-outline mb-4">
+                    <input type="text" formControlName="user" class="form-control" />
+                    <label class="form-label" for="registerUsername">Usuario</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" formControlName="password" class="form-control" />
+                    <label class="form-label" for="registerPassword">Contrasena</label>
+                </div>
+
+                <!-- Salary input -->
+                <div class="form-outline mb-4">
+                    <input type="number" formControlName="salary" class="form-control" />
+                    <label class="form-label" for="registerRepeatPassword">Salario</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <select class="form-select" formControlName="rol_id" aria-label="Default select example">
+                        <option selected>Seleccione...</option>
+                        <option value=1>Administrador</option>
+                        <option value=2>Jefe</option>
+                        <option value=3>Empleado</option>
+                      </select>
+                    <label class="form-label" for="registerRepeatPassword">Seleccione el cargo</label>
+                </div>
+            
+              <!-- Submit button -->
+              <button type="button" (click)="newEmployee()" class="btn btn-primary btn-block mb-4">Registrarse</button>
+            
+              <!-- Register buttons -->
+              <div class="text-center">
+                <p>Se encuentra esta Registrado? <a routerLink="/login">Regresar</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>

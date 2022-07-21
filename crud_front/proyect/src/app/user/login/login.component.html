@@ -1,0 +1,35 @@
+  <div class="container py-5 w-50 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-50">
+      <div class="card bg-dark text-white" style="border-radius: 1rem;">
+        <div class="card-body p-5 text-center">
+          <div class="mb-md-5 mt-md-4 pb-5">
+            <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+            <p class="text-white-50 mb-5">Ingrese su Usuario y Contraseña</p>
+            <form [formGroup]="signInForm">
+              <!-- Email input -->
+              <div class="form-outline">
+                <input type="text" formControlName="user" class="form-control" />
+                <label class="form-label" for="form2Example1">Usuario</label>
+              </div>
+            
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" formControlName="password" class="form-control" />
+                <label class="form-label" for="form2Example2">Contraseña</label>
+              </div>
+            
+              <!-- Submit button -->
+              <button type="button" (click)="singIn()" class="btn btn-primary btn-block mb-4">Sign in</button>
+            
+              <!-- Register buttons -->
+              <div class="text-center">
+                <p>No esta Registrado? <a routerLink="/registroEmpleados">Registrese</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+

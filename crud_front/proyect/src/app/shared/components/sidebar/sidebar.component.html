@@ -1,0 +1,12 @@
+  <mat-sidenav-container class="example-container" >
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/registroHorasExtras"><mat-icon>calendar_today</mat-icon>Registro Horas Extras</a>
+            <a mat-list-item routerLink="/atencion_medica"><mat-icon>assignment</mat-icon>Lista Empleado</a>
+            <a mat-list-item routerLink="/admin"><mat-icon>settings</mat-icon>Admin</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
